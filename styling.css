@@ -1,0 +1,42 @@
+.mainPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.home {
+    color: black;
+    font-weight: bold;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 500px;
+    padding: 20px 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.home:hover {
+    background-color: #424242;
+}
+
+#content {
+    padding: 20px 50px;
+    box-sizing: border-box;
+}
+
+.machineLearning {
+    padding: 20px 50px;
+    box-sizing: border-box;
+}
+
+#ml {
+    background-color: aquamarine;
+}
