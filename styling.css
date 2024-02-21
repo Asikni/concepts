@@ -117,7 +117,7 @@ weather.rainy {
     flex-direction: row;
 }
 #loader {
-    border: 12px solid #f3f3f3;
+    border: 12px solid #f70404;
     border-radius: 50%;
     border-top: 12px solid #444444;
     width: 70px;

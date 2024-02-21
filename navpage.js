@@ -30,6 +30,7 @@ function changeContent(content, buttonId) {
             break;
         case "bar10":
             weatherBallon( 2643743 );
+            
             break;
 
       
@@ -42,19 +43,45 @@ if(key=='') document.getElementById('temp').innerHTML = ('');
 
 
 
-function weatherBallon( cityID ) {
-	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)  
-	.then(function(resp) { return resp.json() }) // Convert data to json
-	.then(function(data) {  //check for await and async
+// function weatherBallon(cityID) {
+//     // Display the loader
+//     document.getElementById('loader').style.display = 'flex';
+
+//     fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + key)
+//         .then(function (resp) { return resp.json() })
+//         .then(function (data) {
+//             drawWeather(data);
+
+//             // Hide the loader and display the weather content
+//             document.getElementById('loader').style.display = 'none';
+           
+//         })
+//         .catch(function () {
+//             // Handle errors
+//             document.getElementById('loader').style.display = 'none';
+//             console.log("Error fetching weather data");
+//         });
+// }
+
+
+async function weatherBallon(cityID){
+    document.getElementById('loader').style.display = 'flex';
+    await fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + key)
+    (function(resp) {return resp.json()})
+    (function(data) {
+        drawWeather(data)
     
-    console.log(data);
-		drawWeather(data);
-	})
-	.catch(function() {
-		// catch any errors
-	});
-  console.log("error")
+    // Hide the loader and display the weather content
+    document.getElementById('loader').style.display = 'none';
+           
+    })
+        .catch(function () {
+            // Handle errors
+            document.getElementById('loader').style.display = 'none';
+            console.log("Error fetching weather data");
+        });
 }
+
 function drawWeather( d ) {
   var celcius = Math.round(parseFloat(d.main.temp)-273.15);
 
@@ -74,3 +101,5 @@ function drawWeather( d ) {
   	document.body.className = 'clear';
   }
 }
+
+
