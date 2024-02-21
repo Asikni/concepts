@@ -44,7 +44,7 @@ if (key == "") document.getElementById("temp").innerHTML = "";
 //     document.getElementById('loader').style.display = 'flex';
 
 //     fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + key)
-//         .then(function (resp) { return resp.json() })
+//         .then(function (resp) { return resp.json() })  //makes function to return
 //         .then(function (data) {
 //             drawWeather(data);
 
@@ -70,7 +70,6 @@ async function weatherBallon(cityID) {
     );
 
     const data = await resp.json();
-    console.log("response is coming");
     drawWeather(data);
   } catch (e) {
     console.log("Error fetching weather data");

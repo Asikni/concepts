@@ -23,13 +23,16 @@ body {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-
+    position: relative;
+  
     gap: 10px;
 }
 
-.home:hover {
+.home:hover, .bar2:hover, .bar3:hover,.bar3:hover, .bar5:hover  {
     background-color: #c2bfbf;
 }
+
+
 .sideContent{
     background-color: antiquewhite;
 }
@@ -50,51 +53,32 @@ body {
 .myStyle{
     background-color: rgb(255, 254, 254);
 }
-.container4 {
+
+.sidebar .bar5{
+    position: relative;;
+}
+.cities{
+ 
+    position: absolute;
+    display: none;
+    left:100%;
+    top:0%;
+    z-index:2;
+}
+
+
+.bar5:hover .cities{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    width: 100%;
-    height:500px;
-    max-width: 520px;
-    margin: 1em;
-    padding: 2em;
-    border-radius: 14px;
-    background: rgb(234 234 234);
-    background: #000000d0;
-    color: white;
-}
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 20px;
+    gap:10px;
+    background-color: rgb(243, 217, 182);
+    
 
-.input > input {
-    border: none;
-    outline: none;
-    padding: 0.3rem;
-    border-radius: 18px;
-    color: rgb(255 255 255);
-    background: #7c7c7c2b;
-    font-family: 'Raleway', sans-serif;
+    
 }
-
-button.button {
-    border: none;
-    width: 100px;
-    padding: 6px;
-    border-radius: 20px;
-    background: #7c7c7c2b;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    transition: (.5s);
-}
-
-button.button:focus{
-    outline:none;
-}
-
-button.button:hover{
-    border: 1px solid rgb(136, 0, 0) 
-}
-
 .displayWeather{
     display: flex;
     flex-direction: column;
