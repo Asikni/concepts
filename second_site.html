@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="styling.css">
 </head>
+
+
 <body>
     <div class="mainPage">
         <div class="sidebar">
@@ -14,60 +16,80 @@
             <div id="bar3" class="bar2" onclick="changeContent('dl', 'bar3')">Bar 2</div>
             <div id="bar4" class="bar3" onclick="changeContent('edl','bar4')">AI in Everyday Life</div>
             <div id="bar5" class="bar5" onclick="changeContent('weather','bar5')">Weather Update</div>
+            <div id="bar6" class="bar6" onclick="changeContent('weather','bar6')">Mumbai</div>
+            <div id="bar7" class="bar7" onclick="changeContent('weather','bar7')">Delhi</div>
+            <div id="bar8" class="bar8" onclick="changeContent('weather','bar8')">Bangalore</div>
+            <div id="bar9" class="bar9" onclick="changeContent('weather','bar8')">Toronto</div>
+            <div id="bar10" class="bar10" onclick="changeContent('weather','bar9')">London</div>
+            
         </div>
-        <div class="sideContent">
-            <div id="content" >
-                Artificial Intelligence (AI) has emerged as a transformative force, 
-                revolutionizing industries, shaping the future of technology, and 
-                challenging the boundaries of human capabilities. From intelligent 
-                virtual assistants to self-driving cars, AI is becoming an integral 
-                part of our daily lives. In this article, we'll explore the foundations, 
-                applications, and ethical considerations surrounding artificial 
-                intelligence.
+        <div class="mainContent">
+            <div class="sideContent">
+                <div id="content" >
+                    Artificial Intelligence (AI) has emerged as a transformative force, 
+                    revolutionizing industries, shaping the future of technology, and 
+                    challenging the boundaries of human capabilities. From intelligent 
+                    virtual assistants to self-driving cars, AI is becoming an integral 
+                    part of our daily lives. In this article, we'll explore the foundations, 
+                    applications, and ethical considerations surrounding artificial 
+                    intelligence.
+                </div>
+                <div id="mainTopic" class="mainTopic" style="display: none;">
+                    Artificial Intelligence (AI) has emerged as a transformative force, 
+                    revolutionizing industries, shaping the future of technology, and 
+                    challenging the boundaries of human capabilities. From intelligent 
+                    virtual assistants to self-driving cars, AI is becoming an integral 
+                    part of our daily lives. In this article, we'll explore the foundations, 
+                    applications, and ethical considerations surrounding artificial 
+                    intelligence.
+                </div>
+                <div id="ml" class="machineLearning" style="display:none">
+                    One of the driving forces behind AI's recent advancements is machine 
+                    learning (ML), a subset of AI that focuses on enabling computers to learn 
+                    from data. ML algorithms allow systems to improve their performance over 
+                    time without explicit programming. Whether it's image recognition, speech 
+                    processing, or recommendation systems, ML algorithms analyze data patterns
+                    and make predictions, automating complex decision-making processes.
+                </div>
+                <div id="dl" class="deepLearning" style="display:none">
+                    Within machine learning, deep learning has gained prominence, particularly in 
+                    solving complex problems. Inspired by the structure and function of the human 
+                    brain, deep learning models, such as neural networks, consist of interconnected 
+                    layers that can automatically learn hierarchical representations of data. 
+                    This approach has fueled breakthroughs in image and speech recognition, 
+                    language translation, and even playing strategic games like Go.
+                </div>
+                <div id="edl" class="Everydaylife" style="display:none">
+                    AI's impact is pervasive across various sectors. In healthcare, it aids 
+                    in diagnostics, drug discovery, and personalized medicine. Autonomous 
+                    vehicles leverage AI for navigation, object recognition, and decision-making, 
+                    promising a future of safer and more efficient transportation. Virtual assistants, 
+                    powered by natural language processing, enhance our interactions with technology, 
+                    making voice commands and conversation-based interactions commonplace.
+                </div>
+                <div id="weather" style="display: none;"> 
+                    <div id="description"></div>
+                    <h1 id="temp"></h1>
+                    <div id="location"></div>
+                </div>
             </div>
-            <div id="mainTopic" class="mainTopic" style="display: none;">
-                Artificial Intelligence (AI) has emerged as a transformative force, 
-                revolutionizing industries, shaping the future of technology, and 
-                challenging the boundaries of human capabilities. From intelligent 
-                virtual assistants to self-driving cars, AI is becoming an integral 
-                part of our daily lives. In this article, we'll explore the foundations, 
-                applications, and ethical considerations surrounding artificial 
-                intelligence.gfhfg
+            <div class="Loaderanimation">
+                <div id="loader" class="center">
+                </div>
+                <h1>GeeksforGeeks</h1>
+                <h2>A computer science portal for geeks</h2>
+            
+                <img src=
+            "https://media.geeksforgeeks.org/wp-content/uploads/20230723195619/GfG-Image.png"
+                    alt="GeeksforGeeks logo" />
             </div>
-            <div id="ml" class="machineLearning" style="display:none">
-                One of the driving forces behind AI's recent advancements is machine 
-                learning (ML), a subset of AI that focuses on enabling computers to learn 
-                from data. ML algorithms allow systems to improve their performance over 
-                time without explicit programming. Whether it's image recognition, speech 
-                processing, or recommendation systems, ML algorithms analyze data patterns
-                and make predictions, automating complex decision-making processes.
-            </div>
-            <div id="dl" class="deepLearning" style="display:none">
-                Within machine learning, deep learning has gained prominence, particularly in 
-                solving complex problems. Inspired by the structure and function of the human 
-                brain, deep learning models, such as neural networks, consist of interconnected 
-                layers that can automatically learn hierarchical representations of data. 
-                This approach has fueled breakthroughs in image and speech recognition, 
-                language translation, and even playing strategic games like Go.
-            </div>
-            <div id="edl" class="Everydaylife" style="display:none">
-                AI's impact is pervasive across various sectors. In healthcare, it aids 
-                in diagnostics, drug discovery, and personalized medicine. Autonomous 
-                vehicles leverage AI for navigation, object recognition, and decision-making, 
-                promising a future of safer and more efficient transportation. Virtual assistants, 
-                powered by natural language processing, enhance our interactions with technology, 
-                making voice commands and conversation-based interactions commonplace.
-            </div>
-            <div id="weather" style="display: none;"> 
-                <div id="description"></div>
-                <h1 id="temp"></h1>
-                <div id="location"></div>
-            </div>
+        </div> 
+  
+         
 
-        </div>
-
-
+        
     </div>
+
     <script src="navpage.js"></script>
 </body>
 </html>

@@ -11,11 +11,28 @@ function changeContent(content, buttonId) {
     activeButton = buttonId;
 
     document.getElementById('content').innerHTML = document.getElementById(content).innerHTML;
-    if (buttonId==="bar5"){
+    switch (buttonId){
+        case "bar5":
+            weatherBallon( 1255634 );
+            break;
+        case "bar6":
+            weatherBallon( 1275339 );
+            break;
+        case "bar7":
+            weatherBallon( 1261481 );
+            break;
+        case "bar8":
+            weatherBallon( 2176973 );
+             break;
 
-        
-            weatherBallon( 3245 );
-        
+        case "bar9":
+            weatherBallon(5174095 );
+            break;
+        case "bar10":
+            weatherBallon( 2643743 );
+            break;
+
+      
     }
 
 }
