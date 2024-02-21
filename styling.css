@@ -1,6 +1,7 @@
 .mainPage {
     display: flex;
     flex-direction: row;
+  
     justify-content: space-between;
 }
 
@@ -11,22 +12,27 @@
 
 body {
     font-family: Arial, sans-serif;
+    
 }
 
 .sidebar {
+    background-color: rgb(243, 217, 182);
     width: 500px;
     padding: 20px 0px;
     box-sizing: border-box;
     cursor: pointer;
     display: flex;
     flex-direction: column;
+
     gap: 10px;
 }
 
 .home:hover {
-    background-color: #424242;
+    background-color: #c2bfbf;
 }
-
+.sideContent{
+    background-color: antiquewhite;
+}
 #content {
     padding: 20px 50px;
     box-sizing: border-box;
@@ -39,4 +45,70 @@ body {
 
 #ml {
     background-color: aquamarine;
+}
+
+.myStyle{
+    background-color: rgb(255, 254, 254);
+}
+.container4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height:500px;
+    max-width: 520px;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 14px;
+    background: rgb(234 234 234);
+    background: #000000d0;
+    color: white;
+}
+
+.input > input {
+    border: none;
+    outline: none;
+    padding: 0.3rem;
+    border-radius: 18px;
+    color: rgb(255 255 255);
+    background: #7c7c7c2b;
+    font-family: 'Raleway', sans-serif;
+}
+
+button.button {
+    border: none;
+    width: 100px;
+    padding: 6px;
+    border-radius: 20px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    transition: (.5s);
+}
+
+button.button:focus{
+    outline:none;
+}
+
+button.button:hover{
+    border: 1px solid rgb(136, 0, 0) 
+}
+
+.displayWeather{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+weather.sunny {
+    background-image: linear-gradient(to right top, #ff4e50, #ff713e, #ff932b, #ffb41d, #f9d423);
+}
+weather.cloudy {
+    background-image: linear-gradient(to right top, #63747c, #71858e, #7f96a0, #8da8b2, #9bbac5);
+}
+weather.rainy {
+    background-image: linear-gradient(to right top, #637c7b, #718e8c, #7ea09e, #8db2b0, #9bc5c3);
 }

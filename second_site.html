@@ -13,6 +13,7 @@
             <div id="bar2" class="bar" onclick="changeContent('ml','bar2')">Bar 1</div>
             <div id="bar3" class="bar2" onclick="changeContent('dl', 'bar3')">Bar 2</div>
             <div id="bar4" class="bar3" onclick="changeContent('edl','bar4')">AI in Everyday Life</div>
+            <div id="bar5" class="bar5" onclick="changeContent('weather','bar5')">Weather Update</div>
         </div>
         <div class="sideContent">
             <div id="content" >
@@ -57,7 +58,15 @@
                 powered by natural language processing, enhance our interactions with technology, 
                 making voice commands and conversation-based interactions commonplace.
             </div>
+            <div id="weather" style="display: none;"> 
+                <div id="description"></div>
+                <h1 id="temp"></h1>
+                <div id="location"></div>
+            </div>
+
         </div>
+
+
     </div>
     <script src="navpage.js"></script>
 </body>
