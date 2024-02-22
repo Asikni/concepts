@@ -15,8 +15,9 @@
             <div id="bar2" class="bar" onclick="changeContent('ml','bar2')">Bar 1</div>
             <div id="bar3" class="bar2" onclick="changeContent('dl', 'bar3')">Bar 2</div>
             <div id="bar4" class="bar3" onclick="changeContent('edl','bar4')">AI in Everyday Life</div>
-            <div id="bar5" class="bar5" onclick="changeContent('weather','bar5')">Weather Update
+            <div id="bar5" class="bar5" >Weather Update
             <div class="cities">
+                <div id="bar11" class="bar11" onclick="changeContent('weather','bar11')">Srinagar</div>
                 <div id="bar6" class="bar6" onclick="changeContent('weather','bar6')">Mumbai</div>
                 <div id="bar7" class="bar7" onclick="changeContent('weather','bar7')">Delhi</div>
                 <div id="bar8" class="bar8" onclick="changeContent('weather','bar8')">Bangalore</div>
@@ -78,12 +79,39 @@
                     <div id="location"></div>
 
                 </div>
-            </div>
+                <div class="practice">
+                    <p>Write something in the text field to trigger a function.</p>
 
-  
-         
+                    <input type="text" id="myInput" oninput="myFunction()">
 
-        
+                    <p id="demo"></p>
+                    <p>Select a new car from the list.</p>
+
+                    <select id="mySelect" onchange="myFunction()">
+                    <option value="Audi">Audi</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes">Mercedes</option>
+                    <option value="Volvo">Volvo</option>
+                    </select>
+                    
+                    <p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+                    <p id="demo2"></p>
+
+                    Enter your name: <input type="text" id="fname">
+
+                    <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+                    
+                    <p>How to dynamically update a slider value with oninput vs onchnage.</p>
+
+                <input type="range" id="range">                          
+                    <p id="demo3"></p>
+
+                    <input type="range" id="range2">  
+                    <p id="demo4"></p>
+                </div>
+
     </div>
 
     <script src="navpage.js"></script>
