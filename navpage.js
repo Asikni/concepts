@@ -2,10 +2,6 @@ let activeButton = null;
 let weatherData = {};
 
 
-function handleWeatherUpdateClick(content, buttonId) {
-  document.getElementById("weather").style.display = "block";
-}
-
 function changeContent(content, buttonId) {
   console.log("call");
   if (activeButton) {
@@ -20,9 +16,8 @@ function changeContent(content, buttonId) {
     document.getElementById(content).innerHTML;
 
   switch (buttonId) {
-    case "bar5":
-      weatherBallon(1255634, buttonId);
-      break;
+
+
     case "bar6":
       weatherBallon(1275339, buttonId);
       break;
@@ -38,6 +33,10 @@ function changeContent(content, buttonId) {
     case "bar10":
       weatherBallon(2643743, buttonId);
       break;
+    case "bar11":
+      weatherBallon(1255634, buttonId);
+      break;
+
   }
 }
 
@@ -94,13 +93,14 @@ function drawWeather(d) {
 }
 
 
-
-
-
-
-
-
-
+async function fetchMyDocument() {      
+  try {
+    let response = await fetch('C:/Users/hp/Documents/office/second_site/page2.html'); // Gets a promise
+    document.body.innerHTML = await response.text(); // Replaces body with response
+  } catch (err) {
+    console.log('Fetch error:' + err); // Error handling
+  }
+}
 
 
 
