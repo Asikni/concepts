@@ -91,18 +91,40 @@ function drawWeather(d) {
     document.body.className = "clear";
   }
 }
-
+function changePage() {
+  history.pushState({}, "page2", "page2.html");
+  fetchMyDocument();
+}
 
 async function fetchMyDocument() {      
   try {
-    let response = await fetch('C:/Users/hp/Documents/office/second_site/page2.html'); // Gets a promise
+    let response = await fetch("page2.html"); // Gets a promise
+    console.log("response1" ,response)
     document.body.innerHTML = await response.text(); // Replaces body with response
+    console.log("this gets executed")
   } catch (err) {
     console.log('Fetch error:' + err); // Error handling
+
   }
 }
 
-
+function changePageone() {
+ 
+  history.pushState({}, "page1", "second_site.html");
+ 
+  homePage();
+ }
+ async function homePage() {   
+   try {
+     let response2 = await fetch("second_site.html"); // Gets a promise
+     console.log("response2" ,response2)
+     document.body.innerHTML = await response2.text(); // Replaces body with response
+   } catch (err) {
+     console.log('Fetch error:' + err); // Error handling
+   }
+ 
+     }
+     
 
 
 
