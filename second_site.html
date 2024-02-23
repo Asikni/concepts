@@ -16,8 +16,7 @@
             <div id="bar3" class="bar2" onclick="changeContent('dl', 'bar3')">Bar 2</div>
             <div id="bar4" class="bar3" onclick="changeContent('edl','bar4')">AI in Everyday Life</div>
             <div id="bar5" class="bar5" >Weather Update
-            <div class="cities">
-               
+            <div class="cities" >
                 <div id="bar6" class="bar6" onclick="changeContent('weather','bar6')">Mumbai</div>
                 <div id="bar7" class="bar7" onclick="changeContent('weather','bar7')">Delhi</div>
                 <div id="bar8" class="bar8" onclick="changeContent('weather','bar8')">Bangalore</div>
@@ -119,8 +118,29 @@
 
             </div>
             <div class="page2">
-                <button onclick=changePage()>take me to next page</button>
+                <button onclick=changeToPageTwo()>take me to next page</button>
             </div>
+            <div class="searchCars">
+
+                <div><label form="colorname">Select a Car</label></div>
+                <div id="inputfield"  class="inputfield" onclick="openmenu()" ><input type="text" id="carname" onblur="clickoutside()" ></div>
+                <div id="custom-select" class="custom-select" >
+             
+                        <div id="car1" onclick="addcar('car1')">Audi</div>
+                        <div id="car2" onclick="addcar('car2')">BMW</div>
+                        <div id="car3"onclick="addcar('car3')">Citroen</div>
+                    <!-- <div >Ford</div>
+                    <div >Honda</div>
+                    <div >Jaguar</div>
+                    <div >Land Rover</div>
+                    <div >Mercedes</div>
+                    <div >Mini</div>
+                    <div ">Nissan</div>
+                    <div ">Toyota</div>
+                    <div ">Volvo</div> -->
+                    
+                </div>
+        </div>
             
         </body>
     <script src="navpage.js">

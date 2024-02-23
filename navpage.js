@@ -17,7 +17,6 @@ function changeContent(content, buttonId) {
 
   switch (buttonId) {
 
-
     case "bar6":
       weatherBallon(1275339, buttonId);
       break;
@@ -49,16 +48,17 @@ async function weatherBallon(cityID, buttonId) {
 
     // Check if weather data already available
     if (weatherData[buttonId]) {
-      console.log("Data for", buttonId, "already available:", weatherData[buttonId]);
-      drawWeather(weatherData[buttonId]);
+      // console.log("Data for", buttonId, "already available:", weatherData[buttonId]);
+      weatherData[buttonId];
     } else {
       const resp = await fetch(
         "https://api.openweathermap.org/data/2.5/weather?id=" + cityID + "&appid=" + key
       );
       const data = await resp.json();
-      weatherData[buttonId] = data; // Store the weather data
-      console.log("Data for", buttonId, "fetched:", weatherData[buttonId]);
-      drawWeather(data);
+      // console.log("Data for", buttonId, "fetched:", weatherData[buttonId]);
+      weatherData[buttonId] = drawWeather(data); // Store the weather data
+      
+      ;
     }
   } catch (e) {
     console.error("Error fetching weather data:", e);
@@ -91,48 +91,9 @@ function drawWeather(d) {
     document.body.className = "clear";
   }
 }
-function changePage() {
-  history.pushState({}, "page2", "page2.html");
-  fetchMyDocument();
-}
-
-async function fetchMyDocument() {      
-  try {
-    let response = await fetch("page2.html"); // Gets a promise
-    console.log("response1" ,response)
-    document.body.innerHTML = await response.text(); // Replaces body with response
-    console.log("this gets executed")
-  } catch (err) {
-    console.log('Fetch error:' + err); // Error handling
-
-  }
-}
-
-function changePageone() {
- 
-  history.pushState({}, "page1", "second_site.html");
- 
-  homePage();
- }
- async function homePage() {   
-   try {
-     let response2 = await fetch("second_site.html"); // Gets a promise
-     console.log("response2" ,response2)
-     document.body.innerHTML = await response2.text(); // Replaces body with response
-   } catch (err) {
-     console.log('Fetch error:' + err); // Error handling
-   }
- 
-     }
-     
 
 
-
-
-
-
-
-
+///////////////////////////////////////////
 
 function myFunction() {
   let text = document.getElementById("myInput").value;
@@ -167,4 +128,65 @@ document.getElementById("range2").addEventListener("change", function() {
 
 function sliderChange2(value) {
   document.getElementById("demo4").innerHTML = value;
+}
+
+
+
+//////////////////////////// CHANGE PAGES///////////////////////////////
+function changeToPageTwo() {
+  history.pushState({}, "page2", "page2.html");
+  fetchMyDocument();
+}
+
+
+
+async function fetchMyDocument() {      
+  try {
+    let response = await fetch("page2.html"); // Gets a promise
+    document.body.innerHTML = await response.text(); // Replaces body with response
+
+  } catch (err) {
+    console.log('Fetch error:' + err); // Error handling
+
+  }
+}
+
+
+
+function changeToPageone() {
+ 
+  history.pushState({}, "page1", "second_site.html");
+ 
+  homePage();
+ }
+ async function homePage() {   
+   try {
+     let response2 = await fetch("second_site.html"); // Gets a promise
+     document.body.innerHTML = await response2.text(); // Replaces body with response
+   } catch (err) {
+     console.log('Fetch error:' + err); // Error handling
+   }
+ 
+     }
+     
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+function addcar(car){
+  
+  document.getElementById('carname').value= document.getElementById(car).innerHTML
+}
+
+function openmenu(){
+  document.getElementById('custom-select').style.display="block"
+}
+
+function clickoutside(){
+  console.log("function start")
+  let x = document.getElementById("carname");
+  console.log(x)
+  x.value = x.value.toUpperCase();
 }

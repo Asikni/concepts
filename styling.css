@@ -131,3 +131,29 @@ weather.rainy {
     margin-top: 50px;
     
 }
+
+/* --------------------------------------------------------------------------- */
+
+.searchCars{
+    border:1px solid red;
+}
+
+#colorname{
+    width:50%
+}
+
+#colorname:hover{
+   cursor:pointer
+}
+.inputfield{
+    
+    position: relative;
+}
+.custom-select{
+    border: 1px solid green;
+    padding:5px;
+    width:50%;
+    display: none;
+    margin-top: 5px;;
+}
+
