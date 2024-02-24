@@ -148,6 +148,7 @@ weather.rainy {
 #carname{
     width:100%;
     padding:8px;
+    
 }
 
 #carname:hover{
@@ -160,27 +161,43 @@ weather.rainy {
     width:50%;
     display: none;
     margin-top: 5px;
+    height: 9rem;
+    overflow: auto;
     
 }
 
 
 .custom-select:hover{
     cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    
 }
-
+.custom-select div{
+    padding: 10px 5px;
+}
 .custom-select div:hover{
     background-color: lightblue;
 }
 .crossimg{
     position: absolute;
     display: none;
-    left:95%;
+    left:90%;
     top:12%;
-    border: 1px solid red;
     background-image: url("x.svg");
-    width:1.5rem;
-    height: 1.5rem;
+    width:1.2rem;
+    height: 1.2rem;
     background-repeat: no-repeat;
 }
 
+
+.arrowimg{
+    border:1px solid rgb(16, 237, 0);
+    position: absolute;
+    display: none;
+    left:98%;
+    top:12%;
+    background-image: url("chevron-down.svg");
+    width:5rem;
+    height: 5em;
+    background-repeat: no-repeat;
+}

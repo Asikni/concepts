@@ -124,8 +124,12 @@
 
                 <div ><label form="carname">Select a Car</label></div>
                
-                <div id="inputfield"  class="inputfield" onclick="openmenu()" ><input onblur="clickoutside()" type="text" id="carname" placeholder="Search for Cars...">
+                <div id="inputfield"  class="inputfield" onclick="openmenu()" >
+                    <input onblur="clickoutside()" onfocus="changeBackground(event)"
+                        onkeyup="SearchFilter()" type="text" id="carname" 
+                            placeholder="Search for Cars...">
                     <div class="crossimg" id="crossimg" onclick="removeElements(event)"></div>
+                    <div class="arrowimg" id="arrowimg" onclick="rotate(event)" src="chevron-down.svg"></div>
                 </div>
                 
                 <div id="custom-select" class="custom-select" >

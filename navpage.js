@@ -183,17 +183,45 @@ function addcar(car){
 
 function openmenu(){
   document.getElementById('custom-select').style.display="block";
+ 
   
 }
 
 function clickoutside(){
  
   document.getElementById("custom-select").style.display="none";
+  document.getElementById("carname").style.backgroundColor="white";
+  document.getElementById("carname").style.border="thin solid black";
+ 
   
 }
 
-function removeElements(event){
-  document.getElementById("carname").value = " ";
+function changeBackground(event){
+  document.getElementById("carname").style.backgroundColor="#DCDCDC";
+  document.getElementById("carname").style.border="medium solid blue";
   event.stopPropagation();
-  console.log("doner")
+}
+
+function removeElements(event){
+  document.getElementById("carname").value = "Search for Cars...";
+  document.getElementById("crossimg").style.display="none";
+  event.stopPropagation();
+
+}
+
+function SearchFilter() {
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("carname");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("custom-select");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+      } else {
+          li[i].style.display = "none";
+      }
+  }
 }
