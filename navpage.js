@@ -178,15 +178,22 @@ function changeToPageone() {
 function addcar(car){
   
   document.getElementById('carname').value= document.getElementById(car).innerHTML
+  document.getElementById("crossimg").style.display="block"
 }
 
 function openmenu(){
-  document.getElementById('custom-select').style.display="block"
+  document.getElementById('custom-select').style.display="block";
+  
 }
 
 function clickoutside(){
-  console.log("function start")
-  let x = document.getElementById("carname");
-  console.log(x)
-  x.value = x.value.toUpperCase();
+ 
+  document.getElementById("custom-select").style.display="none";
+  
+}
+
+function removeElements(event){
+  document.getElementById("carname").value = " ";
+  event.stopPropagation();
+  console.log("doner")
 }

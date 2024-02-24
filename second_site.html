@@ -122,23 +122,27 @@
             </div>
             <div class="searchCars">
 
-                <div><label form="colorname">Select a Car</label></div>
-                <div id="inputfield"  class="inputfield" onclick="openmenu()" ><input type="text" id="carname" onblur="clickoutside()" ></div>
+                <div ><label form="carname">Select a Car</label></div>
+               
+                <div id="inputfield"  class="inputfield" onclick="openmenu()" ><input onblur="clickoutside()" type="text" id="carname" placeholder="Search for Cars...">
+                    <div class="crossimg" id="crossimg" onclick="removeElements(event)"></div>
+                </div>
+                
                 <div id="custom-select" class="custom-select" >
              
-                        <div id="car1" onclick="addcar('car1')">Audi</div>
-                        <div id="car2" onclick="addcar('car2')">BMW</div>
-                        <div id="car3"onclick="addcar('car3')">Citroen</div>
-                    <!-- <div >Ford</div>
-                    <div >Honda</div>
-                    <div >Jaguar</div>
-                    <div >Land Rover</div>
-                    <div >Mercedes</div>
-                    <div >Mini</div>
-                    <div ">Nissan</div>
-                    <div ">Toyota</div>
-                    <div ">Volvo</div> -->
-                    
+                        <div id="car1" onmousedown="addcar('car1')" >Audi</div>     <!--onmousedown happens before onblur--> 
+                        <div id="car2" onmousedown="addcar('car2')">BMW</div>
+                        <div id="car3"onmousedown="addcar('car3')">Citroen</div>
+                        <div id="car4" onmousedown="addcar('car4')">Ford</div>
+                        <div id="car5" onmousedown="addcar('car5')">Honda</div>
+                        <div id="car6" onmousedown="addcar('car6')">Jaguar</div>
+                        <div id="car7" onmousedown="addcar('car7')">Land Rover</div>
+                        <div id="car8" onmousedown="addcar('car8')">Mercedes</div>
+                        <div id="car9" onmousedown="addcar('car9')">Mini</div>
+                        <div id="car10" onmousedown="addcar('car10')">Nissan</div>
+                        <div id="car11" onmousedown="addcar('car11')">Toyota</div>
+                        <div id="car12" onmousedown="addcar('car12')">Volvo</div>
+                        
                 </div>
         </div>
             

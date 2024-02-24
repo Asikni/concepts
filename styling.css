@@ -135,25 +135,52 @@ weather.rainy {
 /* --------------------------------------------------------------------------- */
 
 .searchCars{
+    padding: 2rem;
     border:1px solid red;
+    height: 60rem;
 }
 
-#colorname{
-    width:50%
+.inputfield{
+    position: relative;
+    width:50%;
 }
 
-#colorname:hover{
+#carname{
+    width:100%;
+    padding:8px;
+}
+
+#carname:hover{
    cursor:pointer
 }
-.inputfield{
-    
-    position: relative;
-}
+
 .custom-select{
     border: 1px solid green;
     padding:5px;
     width:50%;
     display: none;
-    margin-top: 5px;;
+    margin-top: 5px;
+    
+}
+
+
+.custom-select:hover{
+    cursor: pointer;
+   
+}
+
+.custom-select div:hover{
+    background-color: lightblue;
+}
+.crossimg{
+    position: absolute;
+    display: none;
+    left:95%;
+    top:12%;
+    border: 1px solid red;
+    background-image: url("x.svg");
+    width:1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
 }
 
