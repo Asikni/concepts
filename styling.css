@@ -147,7 +147,9 @@ weather.rainy {
 
 #carname{
     width:100%;
-    padding:8px;
+    padding:10px;
+    border-radius: 5px;
+    font-size: 1rem;
     
 }
 
@@ -182,7 +184,7 @@ weather.rainy {
     position: absolute;
     display: none;
     left:90%;
-    top:12%;
+    top:20%;
     background-image: url("x.svg");
     width:1.2rem;
     height: 1.2rem;
@@ -191,13 +193,11 @@ weather.rainy {
 
 
 .arrowimg{
-    border:1px solid rgb(16, 237, 0);
     position: absolute;
-    display: none;
-    left:98%;
-    top:12%;
+    left:97%;
+    top:25%;
     background-image: url("chevron-down.svg");
-    width:5rem;
-    height: 5em;
+    width:1.2rem;
+    height: 1.2em;
     background-repeat: no-repeat;
 }

@@ -209,19 +209,8 @@ function removeElements(event){
 
 }
 
-function SearchFilter() {
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById("carname");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("custom-select");
-  li = ul.getElementsByTagName("li");
-  for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName("a")[0];
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
-      } else {
-          li[i].style.display = "none";
-      }
-  }
+function rotate(event){
+  document.getElementById('custom-select').style.display="block";
+  document.getElementById('arrowimg').style.transform = "rotate(180deg)"
+  event.stopPropagation();
 }
