@@ -176,6 +176,7 @@ weather.rainy {
 }
 .custom-select div{
     padding: 10px 5px;
+    
 }
 .custom-select div:hover{
     background-color: lightblue;

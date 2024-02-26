@@ -214,3 +214,23 @@ function rotate(event){
   document.getElementById('arrowimg').style.transform = "rotate(180deg)"
   event.stopPropagation();
 }
+
+function searchFilter() {
+  let input, filter, options, option;
+  input = document.getElementById('carname');
+  filter = input.value.toUpperCase();
+  console.log("this is filtter",filter)
+  options = document.getElementById('custom-select').getElementsByTagName('div');
+
+  for (let i = 0; i < options.length; i++) {
+      option = options[i];
+      // console.log(option)
+      console.log(option.innerHTML.toUpperCase())
+      console.log(option.innerHTML.toUpperCase().indexOf(filter))  //index of that word 
+      if (option.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          option.style.display = 'block';
+      } else {
+          option.style.display = 'none';
+      }
+  }
+}
