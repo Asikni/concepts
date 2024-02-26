@@ -136,8 +136,9 @@ weather.rainy {
 
 .searchCars{
     padding: 2rem;
-    border:1px solid red;
+    border:10px solid red;
     height: 15rem;
+    
 }
 
 .inputfield{
@@ -217,3 +218,5 @@ weather.rainy {
     font-size: large;
     padding-left: 10px;
 }
+
+/* ------------------------------------=--------------------------------------- */

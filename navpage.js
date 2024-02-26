@@ -258,7 +258,7 @@ function searchFilter() {
 //////////////////////////////////////////////\
 // Debounce function
 function debounce(func, delay) {
-  let timeoutId;
+  let timeoutId;  //keep track of the timer
 
   return function (...args) {
     clearTimeout(timeoutId);
@@ -281,6 +281,6 @@ const debouncedSearch = debounce(search, 1000); // Debounce after 500ms of inact
 //when i give input then change will start
 const searchInput = document.getElementById("search-box");
 searchInput.addEventListener("input", (event) => {
-  const query = event.target.value;
-  debouncedSearch(query);
+  const query = event.target.value;// when user types something get its value
+  debouncedSearch(query);  //give this value to the debouncedSearch function
 });
