@@ -174,59 +174,157 @@ function changeToPageone() {
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
-
+const cars=[];
 function addcar(car){
-  
-  document.getElementById('carname').value= document.getElementById(car).innerHTML
+  cars.push(document.getElementById(car).value);
+  console.log(cars)
+  document.getElementById('carname').value= cars
   document.getElementById("crossimg").style.display="block"
 }
-
+state= false
 function openmenu(){
-  document.getElementById('custom-select').style.display="block";
- 
   
+  if(state===false){
+  document.getElementById('custom-select').style.display="block";
+  document.getElementById('arrowimg').style.transform = "rotate(180deg)"
+  state=true;
+  }else{
+    document.getElementById('custom-select').style.display="none";
+    document.getElementById('arrowimg').style.transform = "rotate(360deg)"
+    state=false
+  }
 }
 
 function clickoutside(){
  
-  document.getElementById("custom-select").style.display="none";
   document.getElementById("carname").style.backgroundColor="white";
   document.getElementById("carname").style.border="thin solid black";
- 
+  document.getElementById("custom-select").style.display="none";
+  document.getElementById('arrowimg').style.transform = "rotate(360deg)"
+
   
 }
 
 function changeBackground(event){
   document.getElementById("carname").style.backgroundColor="#DCDCDC";
-  document.getElementById("carname").style.border="medium solid blue";
+ 
   event.stopPropagation();
 }
 
 function removeElements(event){
-  document.getElementById("carname").value = "Search for Cars...";
+  document.getElementById("carname").value = "";
   document.getElementById("crossimg").style.display="none";
   event.stopPropagation();
 
 }
 
+arrow=false;
 function rotate(event){
+  if(arrow===false){
   document.getElementById('custom-select').style.display="block";
   document.getElementById('arrowimg').style.transform = "rotate(180deg)"
+  arrow=true
+  }else{
+    document.getElementById('custom-select').style.display="none";
+    document.getElementById('arrowimg').style.transform = "rotate(360deg)"
+    arrow=false
+  }
   event.stopPropagation();
 }
+
+
 
 function searchFilter() {
   let input, filter, options, option;
   input = document.getElementById('carname');
-  filter = input.value.toUpperCase();
-  console.log("this is filtter",filter)
+  filter = input.value.toUpperCase(); //A
+  // console.log("this is filtter",filter)
   options = document.getElementById('custom-select').getElementsByTagName('div');
 
   for (let i = 0; i < options.length; i++) {
       option = options[i];
       // console.log(option)
-      console.log(option.innerHTML.toUpperCase())
-      console.log(option.innerHTML.toUpperCase().indexOf(filter))  //index of that word 
+      // console.log(option.innerHTML.toUpperCase())
+      // console.log(option.innerHTML.toUpperCase().indexOf(filter))  //index of that word 
+      if (option.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          option.style.display = 'block';
+      } else {
+          option.style.display = 'none';
+      }
+  }
+}
+
+
+//////////////////////////////////////////////
+function addcar_2(car){
+  
+  document.getElementById('entryCars').innerHTML= document.getElementById(car).innerHTML
+  document.getElementById("crossimg_2").style.display="block"
+ 
+}
+state= false
+function openmenu_2(){
+  
+  if(state===false){
+  document.getElementById('custom-select_2').style.display="block";
+  document.getElementById('arrowimg_2').style.transform = "rotate(180deg)"
+  state=true;
+  }else{
+    document.getElementById('custom-select_2').style.display="none";
+    document.getElementById('arrowimg_2').style.transform = "rotate(360deg)"
+    state=false
+  }
+}
+
+function clickoutside_2(){
+ 
+  document.getElementById("carname_2").style.backgroundColor="white";
+  // document.getElementById("carname_2").style.border="thin solid black";
+  document.getElementById("custom-select_2").style.display="none";
+  document.getElementById('arrowimg_2').style.transform = "rotate(360deg)"
+
+  
+}
+
+function changeBackground_2(event){
+  // document.getElementById("carname_2").style.backgroundColor="#DCDCDC";
+  document.getElementById("carname_2").style.border="";
+  event.stopPropagation();
+}
+
+function removeElements_2(event){
+  document.getElementById("carname_2").value = "";
+  document.getElementById("crossimg_2").style.display="none";
+  event.stopPropagation();
+
+}
+
+arrow=false;
+function rotate_2(event){
+  if(arrow===false){
+  document.getElementById('custom-select_2').style.display="block";
+  document.getElementById('arrowimg_2').style.transform = "rotate(180deg)"
+  arrow=true
+  }else{
+    document.getElementById('custom-select_2').style.display="none";
+    document.getElementById('arrowimg_2').style.transform = "rotate(360deg)"
+    arrow=false
+  }
+  event.stopPropagation();
+}
+
+function searchFilter_2() {
+  let input, filter, options, option;
+  input = document.getElementById('carname_2');
+  filter = input.value.toUpperCase();
+  // console.log("this is filtter",filter)
+  options = document.getElementById('custom-select_2').getElementsByTagName('div');
+
+  for (let i = 0; i < options.length; i++) {
+      option = options[i];
+      // console.log(option)
+      // console.log(option.innerHTML.toUpperCase())
+      // console.log(option.innerHTML.toUpperCase().indexOf(filter))  //index of that word 
       if (option.innerHTML.toUpperCase().indexOf(filter) > -1) {
           option.style.display = 'block';
       } else {
