@@ -174,11 +174,11 @@ function changeToPageone() {
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
-const cars=[];
+
 function addcar(car){
-  cars.push(document.getElementById(car).value);
-  console.log(cars)
-  document.getElementById('carname').value= cars
+ 
+
+  document.getElementById('carname').value= document.getElementById(car).innerHTML
   document.getElementById("crossimg").style.display="block"
 }
 state= false
@@ -255,80 +255,32 @@ function searchFilter() {
 }
 
 
-//////////////////////////////////////////////
-function addcar_2(car){
-  
-  document.getElementById('entryCars').innerHTML= document.getElementById(car).innerHTML
-  document.getElementById("crossimg_2").style.display="block"
- 
-}
-state= false
-function openmenu_2(){
-  
-  if(state===false){
-  document.getElementById('custom-select_2').style.display="block";
-  document.getElementById('arrowimg_2').style.transform = "rotate(180deg)"
-  state=true;
-  }else{
-    document.getElementById('custom-select_2').style.display="none";
-    document.getElementById('arrowimg_2').style.transform = "rotate(360deg)"
-    state=false
-  }
+//////////////////////////////////////////////\
+// Debounce function
+function debounce(func, delay) {
+  let timeoutId;
+
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
 }
 
-function clickoutside_2(){
- 
-  document.getElementById("carname_2").style.backgroundColor="white";
-  // document.getElementById("carname_2").style.border="thin solid black";
-  document.getElementById("custom-select_2").style.display="none";
-  document.getElementById('arrowimg_2').style.transform = "rotate(360deg)"
-
-  
+// Search function (example, replace with your actual search logic)
+function search(query) {
+  const results = `Search results for "${query}"`; // Example
+  document.getElementById("search-results").textContent = results;
 }
 
-function changeBackground_2(event){
-  // document.getElementById("carname_2").style.backgroundColor="#DCDCDC";
-  document.getElementById("carname_2").style.border="";
-  event.stopPropagation();
-}
+// Debounced search function
+const debouncedSearch = debounce(search, 1000); // Debounce after 500ms of inactivity
 
-function removeElements_2(event){
-  document.getElementById("carname_2").value = "";
-  document.getElementById("crossimg_2").style.display="none";
-  event.stopPropagation();
-
-}
-
-arrow=false;
-function rotate_2(event){
-  if(arrow===false){
-  document.getElementById('custom-select_2').style.display="block";
-  document.getElementById('arrowimg_2').style.transform = "rotate(180deg)"
-  arrow=true
-  }else{
-    document.getElementById('custom-select_2').style.display="none";
-    document.getElementById('arrowimg_2').style.transform = "rotate(360deg)"
-    arrow=false
-  }
-  event.stopPropagation();
-}
-
-function searchFilter_2() {
-  let input, filter, options, option;
-  input = document.getElementById('carname_2');
-  filter = input.value.toUpperCase();
-  // console.log("this is filtter",filter)
-  options = document.getElementById('custom-select_2').getElementsByTagName('div');
-
-  for (let i = 0; i < options.length; i++) {
-      option = options[i];
-      // console.log(option)
-      // console.log(option.innerHTML.toUpperCase())
-      // console.log(option.innerHTML.toUpperCase().indexOf(filter))  //index of that word 
-      if (option.innerHTML.toUpperCase().indexOf(filter) > -1) {
-          option.style.display = 'block';
-      } else {
-          option.style.display = 'none';
-      }
-  }
-}
+// Event listener for input change
+//when i give input then change will start
+const searchInput = document.getElementById("search-box");
+searchInput.addEventListener("input", (event) => {
+  const query = event.target.value;
+  debouncedSearch(query);
+});

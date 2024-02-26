@@ -206,103 +206,14 @@ weather.rainy {
 
 
 /* ------------------------------------------------------------------------ */
+#searchInput {
+    padding: 8px;
+    font-size: 16px;
+  }
 
-.searchCars_2{
-    padding: 2rem;
-    border:1px solid red;
-    height: 15rem;
-    
-}
-.multiCarSelect{
-    border:1px solid rgb(0, 226, 41);
-    width:35rem;
-    display: flex;
-    
-}
-
-.entryCars{
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 20px;
-}
-
-.showcars{
-    width: 100%
-}
-.inputfield_2{
-    position: relative;
-    width:50%;
-    /* border:1px solid blue; */
-    
-}
-
-/* *{
-    outline:none !important;
-} */
-input#carname_2{
-    border:none;
-    outline: none;
-    
-}
-#carname_2{
-    border:none;
-    width:100%;
-    padding:10px;
-    border-radius: 5px;
-    font-size: 1rem;
-   
-    
-}
-
-#carname_2:hover{
-   cursor:pointer
-}
-
-.custom-select_2{
-    border: 1px solid green;
-    padding:5px;
-    width:50%;
-    display: none;
-    margin-top: 5px;
-    height: 9rem;
-    overflow: auto;
-    
-}
-
-
-.custom-select_2:hover{
-    cursor: pointer;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   
-}
-.custom-select_2 div{
-    padding: 10px 5px;
-    
-}
-.custom-select_2 div:hover{
-    background-color: lightblue;
-}
-.crossimg_2{
-    position: absolute;
-    display: none;
-    left:150%;
-    top:20%;
-    background-image: url("x.svg");
-    width:1.2rem;
-    height: 1.2rem;
-    background-repeat: no-repeat;
-}
-
-
-.arrowimg_2{
-    border:1px solid red;
-    position: absolute;
-    left:167%;
-    top:25%;
-    background-image: url("chevron-down.svg");
-    width:1.2rem;
-    height: 1.2em;
-    background-repeat: no-repeat;
+#search-box{
+    width:20rem;
+    height:50px;
+    font-size: large;
+    padding-left: 10px;
 }
